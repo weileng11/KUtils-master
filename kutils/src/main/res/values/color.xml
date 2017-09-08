@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dialogui_btn_normal">#ffffff</color>
+    <color name="dialogui_btn_pressed">#eeeeee</color>
+    <color name="datepick_surance_blue">#3598da</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <color name="color_tie_bg">#efeff4</color>
+    <color name="line_dd">#dddddd</color>
+    <color name="line_setting">#e6e6e6</color>
+    <color name="ios_btntext_blue">#007aff</color>
+    <color name="color_text_black">#4c4c4c</color>
+    <color name="text_title_11">#111111</color>
+    <color name="text_black">#333333</color><!--正式发布时改成666666-->
+    <color name="text_black_light">#666666</color><!--正式发布时改成666666-->
+    <color name="text_msg_33">#333333</color>
+    <color name="text_input_44">#444444</color>
+
+    <color name="text_item_33">#333333</color>
+    <color name="btn_alert">#222222</color>
+
+    <color name="blue_3682">#3682d9</color>
+    <color name="blue_35193ff">#5193ff</color>
+
+
+
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="spots_dialog_color">@android:color/holo_blue_dark</color>
+
+
+    <color name="trans">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="ededed">#ededed</color>
+
+
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_ripple_checked">#33019285</color>
+
+    <color name="ksw_md_solid_shadow">#33000000</color>
+
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_checked">#019285</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+</resources>

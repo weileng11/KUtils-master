@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="animation_default_duration">300</integer>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="duration_1">1</integer>
+</resources>

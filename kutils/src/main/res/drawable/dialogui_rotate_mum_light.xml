@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator" >
+    <bitmap
+        android:antialias="true"
+        android:filter="true"
+        android:src="@drawable/dialogui_spinner_mum_light"/>
+
+</rotate>

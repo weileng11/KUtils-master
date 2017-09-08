@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title_panel"
+        android:layout_width="match_parent"
+        android:background="@drawable/dialogui_datepick_top_left_right_coner"
+        android:layout_height="48dp">
+
+        <FrameLayout
+            android:id="@+id/fl_first"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/iv_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@null"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_first"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="取消"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/dialogui_datepick_FontStyleNormalLightBlackMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="选择日期"
+            android:singleLine="true"/>
+
+        <FrameLayout
+            android:id="@+id/fl_next"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@null"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="保存"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_top_customPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+    </FrameLayout>
+
+    <com.zwy.kutils.widget.loadingdialog.widget.DateSelectorWheelView
+        android:id="@+id/dwv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/fl_bottom_customPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+    </FrameLayout>
+</LinearLayout>

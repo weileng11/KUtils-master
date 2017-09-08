@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+            <!-- 圆角的半径 -->
+            <corners android:radius="5dp"/>
+            <!-- 矩形框内的颜色 -->
+            <solid android:color="#f7590b"/>
+            <!-- width矩形框内边框的宽，color边框的的颜色 -->
+            <stroke android:width="1dp" android:color="#f7590b"/>
+
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+            <!-- 圆角的半径 -->
+            <corners android:radius="5dp"/>
+            <!-- 矩形框内的颜色 -->
+            <solid android:color="#f7590b"/>
+            <!-- width矩形框内边框的宽，color边框的的颜色 -->
+            <stroke android:width="1dp" android:color="#f7590b"/>
+
+        </shape>
+    </item>
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <!-- 圆角的半径 -->
+            <corners android:radius="5dp"/>
+            <!-- 矩形框内的颜色 -->
+            <solid android:color="@color/color_tie_bg"/>
+            <!-- width矩形框内边框的宽，color边框的的颜色 -->
+            <stroke
+                android:width="1dp"
+                android:color="@color/color_tie_bg"/>
+
+        </shape>
+    </item>
+
+</selector>

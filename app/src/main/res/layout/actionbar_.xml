@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/actionsheet_blue">
+
+    <TextView
+        android:id="@+id/tv_actionbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="KUtilsTestSample"
+        android:textColor="@color/ksw_md_solid_disable"
+        android:textSize="18sp"/>
+
+    <com.zwy.kutils.widget.customview.circleimageview.CircleImageView
+        android:visibility="gone"
+        android:id="@+id/cv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        app:border_color="@color/btn_alert"
+        app:border_width="1dp"/>
+</RelativeLayout>

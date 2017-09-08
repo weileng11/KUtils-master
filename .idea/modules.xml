@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KUtils.iml" filepath="$PROJECT_DIR$/KUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KUtils-master.iml" filepath="$PROJECT_DIR$/KUtils-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kutils/kutils.iml" filepath="$PROJECT_DIR$/kutils/kutils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kutils/kutils.iml" filepath="$PROJECT_DIR$/kutils/kutils.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_date_time_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_date_time_subtitle"
+            style="@style/dialogui_datepick_fontstyle_normal_blackmiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="日期"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_date_time_year"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014"/>
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/datepick_surance_blue"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_month"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"/>
+
+            <View
+                android:id="@+id/tv_date_time_line0"
+                android:layout_width="5dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/datepick_surance_blue"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_day"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_empty"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  "/>
+
+            <TextView
+                android:id="@+id/tv_date_time_hour"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_line1"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_minute"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_line2"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"/>
+
+            <TextView
+                android:id="@+id/tv_date_time_second"
+                style="@style/dialogui_datepick_fontstyle_normal_bluemiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_date_time_title"
+        android:background="#E1E1E1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_wheel_views"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.zwy.kutils.widget.loadingdialog.widget.WheelView
+            android:id="@+id/wv_date_of_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"/>
+
+        <com.zwy.kutils.widget.loadingdialog.widget.WheelView
+            android:id="@+id/wv_date_of_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.zwy.kutils.widget.loadingdialog.widget.WheelView
+            android:id="@+id/wv_date_of_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.zwy.kutils.widget.loadingdialog.widget.WheelView
+            android:id="@+id/wv_date_of_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.zwy.kutils.widget.loadingdialog.widget.WheelView
+            android:id="@+id/wv_date_of_minute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.zwy.kutils.widget.loadingdialog.widget.WheelView
+            android:id="@+id/wv_date_of_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

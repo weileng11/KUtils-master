@@ -1,0 +1,138 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+version = "2.4.2"
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    resourcePrefix "bounceprogressbar__"//听说这个可以随便填
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 20
+        versionName "2.4.2"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:7.0.1'//注解框架
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'//图片加载
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.25'//万能rv适配器
+    compile 'org.greenrobot:greendao:3.2.0'//数据库框架
+//    okgo
+    compile 'com.lzy.net:okgo:+'
+    //版本号使用 + 可以自动引用最新版
+    compile 'com.lzy.net:okrx:+'
+    //版本号使用 + 可以自动引用最新版
+    compile 'com.lzy.net:okserver:+'
+
+    compile 'com.google.code.gson:gson:2.7'
+
+
+    compile 'com.daimajia.easing:library:2.0@aar'//动画库
+    compile 'com.android.support:support-v13:22.2.1'
+}
+
+def siteUrl = 'https://github.com/devzwy/KUtils'      // 项目的主页
+def gitUrl = 'https://github.com/devzwy/KUtils.git'   // Git仓库的url
+group = "com.github.zwy"
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'An android quicky dev utils'    //项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 1.0.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'zhaowenyun'        //填写的一些基本信息
+                        name 'Alan'
+                        email 'dev_zwy@aliyun.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    failOnError false //必须添加以免出错
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true
+        version true
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "KUtils"    //发布到JCenter上的项目名字
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
